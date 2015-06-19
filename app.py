@@ -51,7 +51,7 @@ def send_to_indico():
             selfie_list.append(new_path)
     print selfie_list
 
-    emotion_scores = indicoio.batch_fer(selfie_list, api_key="YOUR_API_KEY")
+    emotion_scores = indicoio.batch_fer(selfie_list, api_key="0f73d0a7c698469192cbd74886b48615")
 
     emotions = []
     emotion_values = []
@@ -69,4 +69,4 @@ if __name__ == '__main__':
     app.secret_key = "woah it's a secret!"
     sess.init_app(app)
 
-    app.run(debug=True, port=os.environ.get("PORT", 5000), processes=2)
+    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), processes=2)
