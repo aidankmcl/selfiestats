@@ -11,7 +11,9 @@ import indicoio
 
 app = Flask(__name__)
 # session allows you to share variables between pages
-# by saving it to
+# by saving it to the server's storage, often in a lightweight
+# database. You can see at the bottom it's just saving using
+# the filesystem at the moment.
 sess = Session()
 
 ALLOWED_EXTENSIONS = set(["png", "jpg", "jpeg"])
