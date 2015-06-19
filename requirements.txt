@@ -1,4 +1,5 @@
 Flask==0.10.1
+Flask-Session==0.2
 gevent==1.0.1
 greenlet==0.4.3
 grequests==0.2.0

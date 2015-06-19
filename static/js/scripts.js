@@ -1,5 +1,5 @@
 // overide default submit action to specifiy what to do with res
-$('form').submit(function() {
+$('#form_holder > input').click(function() {
     /* 
     jQuery's 'post' method takes an endpoint, data,
     and optionally a success funtion that says what
@@ -11,7 +11,7 @@ $('form').submit(function() {
         var ctx = document.getElementById("result").getContext("2d");
 
         var data = {
-            labels: res['tweets'],
+            labels: res['labels'],
             datasets: [
                 {
                     label: "Emotions",

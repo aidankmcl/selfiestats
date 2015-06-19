@@ -2,9 +2,9 @@
 
 {% block content %}
 <div id="form_holder">
-    <form>
-        <input type="submit" value="Do Math">
-    </form>
+    <!-- Since we already have a jQuery binding, we can cut out the
+    form and set a .click() bind instead of .submit() -->
+    <input type="submit" value="Do Math">
 </div>
 <canvas id="result"></canvas>
 {% endblock %}

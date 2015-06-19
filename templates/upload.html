@@ -1,11 +1,9 @@
+{% extends 'layout.html' %}
 
-
-<link rel="stylesheet" href="/static/css/external/bootstrap.min.css">
-<link rel="stylesheet" href="/static/css/main.css">
-
+{% block content %}
 <div class = "mainText">
     <h1>Welcome to Selfie Stats!</h1>
-    </div>
+</div>
     
     <!-- The name input needs to be in the same form as the file upload input.-->
     
@@ -18,15 +16,16 @@
     </form>
     </div>-->
     
-    <div id = "form_holder2">
-    <form action="{{ url_for("index") }}" method= "post" enctype= "multipart/form-data">
-    <div class="textBox">
-    <h4>Please enter a name</h4>
-    <div class="foo">
-    <input type="text" name="name" placeholder = "Required for storage">
-    </div>
-    </div>
-    <input type="file" name="file">
-    <input type="submit" value="Upload">
+<div id="form_holder2">
+    <form action="/" method= "post" enctype="multipart/form-data">
+        <div class="textBox">
+            <h4>Please enter a name</h4>
+            <div class="foo">
+                <input type="text" name="name" placeholder="Required for storage">
+            </div>
+        </div>
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
     </form>
-	</div>
+</div>
+{% endblock %}
